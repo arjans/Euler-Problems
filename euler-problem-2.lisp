@@ -1,8 +1,0 @@
-(defun problemtwo ()
-  (let ((fib1 1) (fib2 2) (sum 0))
-    (do ()
-	((not (< fib2 4000000)) sum)
-      (if (evenp fib2)
-	  (setf sum (+ sum fib2)))
-      (rotatef fib1 fib2)
-      (setf fib2 (+ fib1 fib2)))))
