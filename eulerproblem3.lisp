@@ -1,0 +1,13 @@
+(defun largest-prime-factor (num)
+  (let ((x 0))
+    (do ((i 2 (+ i 1)))
+	((> i num) x)
+      (if (= (mod num i) 0)
+	  (progn
+	    (setf num (/ num i))
+	    (if (oddp i)
+		(do ((j 2 (+ j 1)))
+		    ((or (and (= (mod i j) 0) (not (= i j)))
+			 (> j i)))
+		  (if (= j i)
+		      (setf x i)))))))))
