@@ -1,8 +1,0 @@
-(defun highestproduct ()
-  (let ((prodlst '()))
-    (dotimes (i 996)
-      (setf prodlst
-	    (append prodlst (list (apply #'* (listof5 i))))))
-    (setf prodlst (sort prodlst #'>))
-    (nth 0 prodlst)))
-
